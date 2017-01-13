@@ -1,0 +1,55 @@
+/**
+ * Tree elements defaults
+ */
+#tripal_dt_tree .node {
+  cursor: pointer;
+}
+
+#tripal_dt_tree .overlay {
+  border: 1px solid #000;
+  background-color: #efefef;
+}
+ 
+#tripal_dt_tree .node circle {
+  stroke: steelblue;
+  stroke-width: 1.5px;
+  fill: #fff;
+}
+
+#tripal_dt_tree .node circle.collapsed {
+  fill: lightsteelblue;
+}
+
+#tripal_dt_tree .node circle.leaf {
+  stroke: lightgray;
+  fill: lightgray;
+}
+
+#tripal_dt_tree .node text {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+#tripal_dt_tree .link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+/**
+ * Drag'n drop elements
+ */
+#tripal_dt_tree .templink {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}
+
+#tripal_dt_tree .ghostCircle.show {
+  display: block;
+}
+
+#tripal_dt_tree .ghostCircle,
+#tripal_dt_tree .activeDrag .ghostCircle {
+  display: none;
+}

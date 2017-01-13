@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * This file contains all Drupal hooks implementations.
+ *
+ */
+
+require('theme/tripal_dt.theme.inc');
+
+
+/**
+ * Implements hook_menu().
+ *
+ * Specifies menu items and URLs used by this module.
+ *
+ * @see https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_menu/7.x
+ *
+ * @ingroup tripal_dt
+ */
+function tripal_dt_menu() {
+  $items = array();
+
+  $items['tripal_dt'] = array(
+    'title' => 'Tree Demo',
+    'description' => 'A nice D3JS demo tree.',
+    'page callback' => 'theme',
+    'page arguments' => array('tripal_dt_tree'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * We need to let Drupal know about our theme functions and their arguments.
+ * We create theme functions to allow users of the module to customize the look
+ * and feel of the output generated in this module.
+ *
+ * @ingroup tripal_dt
+ */
+function tripal_dt_theme($existing, $type, $theme, $path) {
+    
+  $items = array(
+    'tripal_dt_tree' => array(
+      'template' => 'tripal_dt_tree_page',
+      'variables' =>  array(NULL),
+      'path' => "$path/theme/templates",
+    ),
+  );
+ 
+  return $items;
+}
