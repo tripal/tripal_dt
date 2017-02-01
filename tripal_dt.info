@@ -5,7 +5,5 @@ project = tripal_dt
 package = Tripal Extensions
 version = 7.x-2.0
 dependencies[] = tripal_core
-dependencies[] = tripal_views
-dependencies[] = tripal_db
-dependencies[] = tripal_cv
 
+files[] = tripal_dt.test

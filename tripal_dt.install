@@ -14,7 +14,7 @@
  *
  * @ingroup tripal_dt
  */
-function tripal_dt_requirements($phase) {
+/*function tripal_dt_requirements($phase) {
 
 
   $requirements = array();
@@ -35,3 +35,4 @@ function tripal_dt_requirements($phase) {
   }
   return $requirements;
 }
+*/
